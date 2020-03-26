@@ -1,0 +1,17 @@
+
+image: node:13.5.0
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install
+          - npm test
+        services:
+          - mongo
+
+definitions:
+  services:
+    mongo:
+      image: mongo
