@@ -1,9 +1,9 @@
 
 const mongoose = require('mongoose');
 const assert = require('chai').assert;
-const Booking = require('../src/schema/bookingSchema').Booking;
 
-const booking_1 = new Booking({City_name: "WestHaven", Car_type: "premium", Hours: 15, License_number: "S12345678" });
+
+const booking_1 = ({City_name: "WestHaven", Car_type: "premium", Hours: 15, License_number: "S12345678" });
 before(function (done) {
     const db_connect =  mongoose.connect("mongodb://localhost:27017/test", {useNewUrlParser: true} );
     const db = mongoose.connection;
